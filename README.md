@@ -70,11 +70,11 @@ You need to configure your Spring Boot application to connect to your MongoDB At
     * Click "Connect" -> "Connect your application".
     * Choose "Java" and your driver version (e.g., `4.3 or later`).
     * Copy the connection string. It will look similar to this:
-      `mongodb+srv://ldv91:<password>@cluster0.zuxlmuq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+      `mongodb+srv://<User>:<password>@cluster0.zuxlmuq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 2.  **Update `application.properties`:**
     * Open `src/main/resources/application.properties`.
-    * **Replace `<password>` in the connection string with the actual password for your `ldv91` MongoDB user.**
+    * **Replace `<password>` in the connection string with the actual password for your `User` MongoDB user.**
     * Update the `spring.data.mongodb.uri` property:
         ```properties
         spring.application.name=ownerpetapi
