@@ -69,23 +69,18 @@ You need to configure your Spring Boot application to connect to your MongoDB At
     * Navigate to your cluster (e.g., `Cluster0`).
     * Click "Connect" -> "Connect your application".
     * Choose "Java" and your driver version (e.g., `4.3 or later`).
-    * Copy the connection string. It will look similar to this:
-      `mongodb+srv://<User>:<password>@cluster0.zuxlmuq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+    * Copy the connection string
 
 2.  **Update `application.properties`:**
-    * Open `src/main/resources/application.properties`.
-    * **Replace `<password>` in the connection string with the actual password for your `User` MongoDB user.**
     * Update the `spring.data.mongodb.uri` property:
         ```properties
         spring.application.name=ownerpetapi
         server.port=8080
 
         # MongoDB Atlas Connection String
-        # IMPORTANT: Replace YOUR_ACTUAL_PASSWORD_HERE with your MongoDB Atlas user's password
-        spring.data.mongodb.uri=mongodb+srv://YOUR_ACTUAL_USER:YOUR_ACTUAL_PASSWORD_HERE@cluster0.zuxlmuq.mongodb.net/ownerpetdb?retryWrites=true&w=majority&appName=Cluster0
+        spring.data.mongodb.uri=Connection string
         ```
-      *Note: `ownerpetdb` is the database name within your Atlas cluster where data will be stored.*
-
+      
 3.  **Configure Network Access in MongoDB Atlas:**in
     * In MongoDB Atlas, go to **Security > Network Access**.
     * Click **ADD IP ADDRESS**.
